@@ -1,11 +1,10 @@
 const express = require('express')
-const bodyParser = require('body-parser')
+const app = express()
 const mysql = require('mysql')
 const cors = require('cors')
-const app = express()
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
 app.use(cors())
 
 const port = 3000
@@ -41,7 +40,7 @@ app.get('/products', (req, res) => {
 
 // POST
 app.post('/products', (req, res) => {
-    let input = req.body
+    const input = req.body
 
     const insertQuery = 'INSERT INTO products (name, description, image, price) VALUES (?, ?, ?, ?)'
 
