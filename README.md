@@ -20,6 +20,8 @@ Fullstack Junior Web Development <br/>
 
 <img src="./table.png" />
 
+- add `id` attribute as AUTO INCREMENT and PRIMARY KEY
+
 ## Backend
 
 Build using:
